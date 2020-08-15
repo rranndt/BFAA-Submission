@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Ui.Activity.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tab_layout"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collaps_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/right_to_left"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_tab_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@color/secondary_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/secondary_text"
+                    android:fontFamily="@font/slabo_regular"
+                    android:text="@string/username"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/secondary_text"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/type"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/secondary_text"
+                    android:fontFamily="@font/slabo_regular"
+                    android:text="@string/location"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/secondary_text"
+                    android:fontFamily="@font/slabo_regular"
+                    android:text="@string/company"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+                <TextView
+                    android:id="@+id/tv_html_url"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/secondary_text"
+                    android:fontFamily="@font/slabo_regular"
+                    android:text="@string/html_url"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+                <TextView
+                    android:id="@+id/followers"
+                    style="@style/detailsSecondary"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/followers"
+                    android:background="@color/secondary_text"
+                    android:textColor="@color/secondary_text"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/following"
+                    app:layout_constraintStart_toEndOf="@id/iv_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/following"
+                    style="@style/detailsSecondary"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/following"
+                    android:background="@color/secondary_text"
+                    android:textColor="@color/secondary_text"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/repository"
+                    app:layout_constraintStart_toEndOf="@id/followers"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/repository"
+                    style="@style/detailsSecondary"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/lato_light"
+                    android:background="@color/secondary_text"
+                    android:textColor="@color/secondary_text"
+                    android:text="@string/repository"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/following"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

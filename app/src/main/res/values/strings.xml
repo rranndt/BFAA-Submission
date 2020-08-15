@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">GithubUsers</string>
+    <string name="username" translatable="false">Rizki Rian Anandita</string>
+    <string name="html_url" translatable="false">https://github.com/ananditarian19</string>
+    <string name="type" translatable="false">User</string>
+    <string name="search">Search</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="app_version" translatable="false">App Version</string>
+    <string name="location" translatable="false">Bandung, Jawa Barat</string>
+    <string name="company" translatable="false">Amazon, AWS</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repository">Repository</string>
+    <string name="_null" translatable="false"> </string>
+    <string name="back_press">Press again to exit</string>
+    <string name="setting">Setting</string>
+</resources>

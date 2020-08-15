@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GithubUsers</string>
+    <string name="search">Cari</string>
+    <string name="enter_name">Masukkan Nama</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="repository">Repository</string>
+    <string name="back_press">Tekan lagi untuk keluar</string>
+    <string name="setting">Pengaturan</string>
+
+</resources>

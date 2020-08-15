@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Ui.Activity.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tab_layout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/right_to_left"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/primary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@color/secondary_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    style="@style/detailsPrimary"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/slabo_regular"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/lato_light"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/slabo_regular"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/slabo_regular"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location" />
+
+                <TextView
+                    android:id="@+id/tv_html_url"
+                    style="@style/detailsSecondary"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/slabo_regular"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+                <TextView
+                    android:id="@+id/total_followers"
+                    style="@style/detailsPrimary"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/_null"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/followers"
+                    app:layout_constraintEnd_toEndOf="@id/followers"
+                    app:layout_constraintStart_toStartOf="@id/followers"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/total_following"
+                    style="@style/detailsPrimary"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/_null"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/following"
+                    app:layout_constraintEnd_toEndOf="@id/following"
+                    app:layout_constraintStart_toStartOf="@id/following"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/total_repository"
+                    style="@style/detailsPrimary"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/_null"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/repository"
+                    app:layout_constraintEnd_toEndOf="@id/repository"
+                    app:layout_constraintStart_toStartOf="@id/repository"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/followers"
+                    style="@style/detailsSecondary"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/followers"
+                    android:textColor="@color/secondary_text"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/following"
+                    app:layout_constraintStart_toEndOf="@id/iv_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/following"
+                    style="@style/detailsSecondary"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/following"
+                    android:textColor="@color/secondary_text"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/repository"
+                    app:layout_constraintStart_toEndOf="@id/followers"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+                <TextView
+                    android:id="@+id/repository"
+                    style="@style/detailsSecondary"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/lato_light"
+                    android:text="@string/repository"
+                    android:textColor="@color/secondary_text"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/following"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmer_auto_start="true">
+
+                <include layout="@layout/shimmer_item" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabBackground="@drawable/bg_line"
+            app:tabIndicatorColor="@color/primary"
+            app:tabSelectedTextColor="@color/primary"
+            app:tabTextColor="@color/primary_text" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
